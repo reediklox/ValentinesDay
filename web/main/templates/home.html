@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block Main %}
+    <div class="SendValContainer MaxHeight MaxWidth Flex AlignCenter JustifyConCenter">
+        <form class="VForm" method="post" action="{% url 'home' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <span class="Text VText">Valentine Message</span>
+            {{ form.non_field_errors }}
+            {{ form.recipient.errors }}
+            {{ form.message.errors }}
+            {{ form.recipient }}
+            {{ form.message }}
+            <button type="submit">Send</button>
+        </form>
+    </div>
+{% endblock %}

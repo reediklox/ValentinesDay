@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+{% load custom_tags %}
+
+<html lang="en" class="MaxHeight MaxWidth">
+<head>
+    <meta charset="UTF-8">
+    <title>My Valentine</title>
+    <link rel="icon" href="{% static 'main/img/WhiteHeart.png' %}">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body class="MaxHeight MaxWidth">
+    <div class="MaxHeight AutoWidth Flex Column">
+        <header class="header Flex AlignCenter JustifySpaceB">
+            <div class="Requests">
+                {% if received|any_unread %}
+                    <span><a class="NotReaded" href="{% url 'messages' %}">Messages</a></span>
+                {% else %}
+                    <span><a class="Text" href="{% url 'messages' %}">Messages</a></span>
+                {% endif %}
+            </div>
+            <div class="General Grid JustifyItCenter"><span class="Text"><a href="{% url 'home' %}">My Valentine</a></span></div>
+            <div class="Login Grid JustifyEnd"><span class="Text">{{user}}
+                {% if user %}
+                <span class="Logout Text">•</span>
+                <span class="Logout Text"><a href="{% url 'logout' %}">logout</a></span>
+                {% endif %}
+            </span></div>
+        </header>
+        {% block Main %}
+        {% endblock %}
+    </div>
+</body>
+</html>

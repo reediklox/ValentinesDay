@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block Main %}
+<div class="FormContainer MaxHeight MaxWidth Flex AlignCenter JustifyConCenter">
+    <form class="VForm" method="post" action="{% url 'login' %}" enctype="multipart/form-data" name="login">
+        {% csrf_token %}
+        <span class="Text VText">Valentine Name</span>
+        {{ form.non_field_errors }}
+        {{ form.login }}
+        <button type="submit">Login</button>
+    </form>
+</div>
+{% endblock %}

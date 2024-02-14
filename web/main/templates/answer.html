@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block Main %}
+    <div class="SendValContainer MaxHeight MaxWidth Flex AlignCenter JustifyConCenter">
+        <form class="VForm" method="post" action="{% url 'answer' message.id %}" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <div class="InfoContainer MaxWidth">
+                <span class="Text VText">{{ message.sender.login }}</span>
+                <p class="QText Text">{{message.question}}</p>
+            </div>
+            
+            {{ form.answer.errors }}
+            {{ form.answer }}
+            <button type="submit">Answer</button>
+        </form>
+    </div>
+{% endblock %}

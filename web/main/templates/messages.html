@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block Main %}
+<div class="container Flex JustifySpaceB">
+    <div class="rowRecieve FiftyWidth Flex Column">
+        <div class="General Grid JustifyItCenter MaxWidth"><span class="Text">Received Valentines</span></div>
+        {% for message in messages %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                {% if message.answer %}
+                    <div class="card-body">
+                        <h4 class="card-title">{{ message.sender.login }}</h4>
+                        <p class="card-text">{{ message.question }}</p>
+                    </div>
+                {% else %}
+                    <div class="card-body Grid JustifyItCenter MaxWidth">
+                        <a href="{% url 'answer' message.id %}"><img style="height: 67px; padding-top: 3px" src="{% static 'main/img/RedHeart.png' %}" alt="Open to check!"></a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="rowSend FiftyWidth Flex Column">
+        <div class="General Grid JustifyItCenter MaxWidth"><span class="Text">Sended Valentines</span></div>
+        {% for message in sended %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">{{ message.question }}</h4>
+                <p class="card-text">Answer: {{ message.answer }}</p>
+            </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,180 @@
+html {
+    background-image: url("../img/HeartBack.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+html, body {
+    margin: 0;
+    overflow: hidden;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: azure;
+}
+
+.MaxHeight {
+    min-height: 100vh;
+}
+
+.MaxWidth {
+    min-width: 100%;
+}
+
+.FiftyWidth {
+    width: 48%;
+}
+
+.AutoWidth {
+    width: auto;
+}
+
+.Flex {
+    display: flex;
+}
+
+.Column {
+    flex-direction: column;
+}
+
+.AlignCenter {
+    align-items: center;
+}
+
+.JustifySpaceB {
+    justify-content: space-between;
+}
+.JustifyEnd {
+    justify-content: end;
+}
+.JustifyItCenter {
+    justify-items: center;
+}
+
+.JustifyConCenter {
+    justify-content: center;
+}
+
+.Fixed {
+    position: fixed;
+}
+
+.header {
+    background-color: rgb(244, 194, 195);
+    border-bottom: 1px solid rgb(212, 142, 145);
+    padding: 20px;
+}
+
+.header span {
+    font-size: 18px;
+}
+
+.Grid {
+    display: grid;
+}
+
+.Requests {
+    width: 45%;
+}
+
+.General {
+    width: 10%;
+}
+
+.Login {
+    width: 45%;
+}
+
+.Logout {
+    margin-left: 3px;
+}
+
+.Text {
+    color: azure;
+}
+
+@font-face {
+    font-family: BillaCyr;
+    src: url(BillabongCyr.ttf)
+}
+
+.General, .VForm span {
+    font-family: BillaCyr;
+    font-size: 30px;
+}
+
+.VForm {
+    width: 400px;
+    background-color: #f0d6d9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.VText {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.VForm  input[type="text"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #bf3152;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.VForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #bf3152; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.VForm button:hover {
+    background-color: #a22944;
+}
+
+.card {
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-title {
+    color: #ff4081;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  
+  .card-text {
+    color: #424242;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    margin-left: 5px;
+  }
+  
+  .container {
+    padding-top: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
